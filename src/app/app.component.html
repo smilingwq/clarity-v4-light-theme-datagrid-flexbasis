@@ -1,0 +1,84 @@
+<div class="main-container">
+	<header class="header-2">
+		<div class="branding">
+			<a class="nav-link">
+				<clr-icon shape="home" size="24"></clr-icon>
+				<span class="title">Clarity</span>
+			</a>
+		</div>
+		<div class="header-nav">
+			<a class="active nav-link nav-text">Home</a>
+		</div>
+	</header>
+	<div class="content-container">
+		<div class="content-area">
+			<h3>Datagrid1:</h3>
+			<clr-datagrid>
+				<clr-dg-column>User ID</clr-dg-column>
+				<clr-dg-column class="max-twenty-percentage">Name</clr-dg-column>
+				<clr-dg-column>Creation date</clr-dg-column>
+				<clr-dg-column>Favorite color</clr-dg-column>
+
+				<clr-dg-row *ngFor="let user of users1">
+					<clr-dg-cell>{{user.id}}</clr-dg-cell>
+					<clr-dg-cell class="max-twenty-percentage">
+						<p>{{user.name}}</p>
+					</clr-dg-cell>
+					<clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+					<clr-dg-cell>{{user.color}}</clr-dg-cell>
+				</clr-dg-row>
+
+				<clr-dg-footer>{{users1.length}} users</clr-dg-footer>
+			</clr-datagrid>
+
+			<hr>
+
+			<h3>Datagrid2:</h3>
+			<clr-datagrid>
+				<clr-dg-column>User ID</clr-dg-column>
+				<clr-dg-column class="twenty-percentage">Name</clr-dg-column>
+				<clr-dg-column>Creation date</clr-dg-column>
+				<clr-dg-column>Favorite color</clr-dg-column>
+
+				<clr-dg-row *ngFor="let user of users2">
+					<clr-dg-cell>{{user.id}}</clr-dg-cell>
+					<clr-dg-cell class="twenty-percentage">
+						{{user.name}}
+					</clr-dg-cell>
+					<clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+					<clr-dg-cell>{{user.color}}</clr-dg-cell>
+				</clr-dg-row>
+
+				<clr-dg-footer>{{users2.length}} users</clr-dg-footer>
+			</clr-datagrid>
+
+			<hr>
+
+			<h3>Datagrid3:</h3>
+			<clr-datagrid>
+				<clr-dg-column>User ID</clr-dg-column>
+				<clr-dg-column class="fix-width">Name</clr-dg-column>
+				<clr-dg-column>Creation date</clr-dg-column>
+				<clr-dg-column>Favorite color</clr-dg-column>
+
+				<clr-dg-row *ngFor="let user of users2">
+					<clr-dg-cell>{{user.id}}</clr-dg-cell>
+					<clr-dg-cell class="fix-width">
+						{{user.name}}
+					</clr-dg-cell>
+					<clr-dg-cell>{{user.creation | date}}</clr-dg-cell>
+					<clr-dg-cell>{{user.color}}</clr-dg-cell>
+				</clr-dg-row>
+
+				<clr-dg-footer>{{users3.length}} users</clr-dg-footer>
+			</clr-datagrid>
+			<!-- <ul>
+				<li>Start by clicking Fork in the toolbar above.</li>
+				<li>Implement the problem in the new editor.</li>
+				<li>Save the result, and share the url in a GitHub or StackOverflow issue.</li>
+			</ul>
+
+      <p>It helps to ensure you are running the latest version of Clarity, to update you can go to the Dependencies block in the left column, and add <code class="clr-code">@clr/angular@latest @clr/ui@latest @clr/icons@latest</code> to the package input to update Clarity to latest. You can substitute latest for a version number to install a specific version.</p> -->
+		</div>
+	</div>
+</div>

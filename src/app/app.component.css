@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+
+.max-twenty-percentage {
+  max-width: 20%;
+}
+
+.twenty-percentage {
+  flex-basis: 0;
+}
+
+.fix-width {
+  width: 300px;
+}
